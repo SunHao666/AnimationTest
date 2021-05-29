@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlin.animationtest.MainActivity
 import com.kotlin.animationtest.R
+import com.kotlin.animationtest.tween.TweenAcy
 import com.kotlin.animationtest.ui.activity.FrameAnimationAcy
 import com.kotlin.animationtest.ui.adapter.HomeAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -40,15 +41,16 @@ class HomeFragment : Fragment() {
     }
 
     private fun initData() {
-        val data = listOf<String>("帧动画")
+        val data = listOf<String>("帧动画","补间动画")
         mAdapter.addData(data)
     }
 
     private fun initView() {
         mAdapter = HomeAdapter()
         mAdapter.setOnItemClickListener { adapter, view, position ->
-            if(position == 0){          //动画
-                context?.startActivity<FrameAnimationAcy>()
+            when(position){          //动画
+                0 ->context?.startActivity<FrameAnimationAcy>()
+                1 ->context?.startActivity<TweenAcy>()
             }
         }
         mHomeRv.apply {

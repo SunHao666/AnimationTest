@@ -12,6 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/myActivityOutEnterAnima</item>
     </style>
 
     <!-- 加载弹框样式 -->
@@ -26,5 +27,13 @@
     <style name="LightProgressDialog" parent="@style/LightDialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="myActivityOutEnterAnima" parent="@android:style/Animation.Activity">
+        <!-- 定义activity的进出场动画 -->
+        <item name="android:activityOpenEnterAnimation">@anim/right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/right_out</item>
     </style>
 </resources>
