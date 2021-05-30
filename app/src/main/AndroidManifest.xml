@@ -17,14 +17,23 @@
         <activity android:name=".ui.activity.FrameAnimationAcy" />
         <activity android:name=".tween.TweenAcy"  />
         <activity android:name=".ui.activity.AActivity" >
+
+        </activity>
+        <activity android:name=".ui.activity.CActivity" />
+        <activity android:name=".ui.activity.BActivity" />
+        <activity android:name=".animator.activity.ViewPropertyAnimatorAcy" >
+
+        </activity>
+        <activity android:name=".animator.activity.AnimatorAcy" >
+
+        </activity>
+        <activity android:name=".property.activity.PropertyActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.CActivity" />
-        <activity android:name=".ui.activity.BActivity" />
     </application>
 
 </manifest>
